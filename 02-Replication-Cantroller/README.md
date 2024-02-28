@@ -10,7 +10,6 @@
   240  kubectl delete pod helloworld-controller-x569j helloworld-controller-d8mjc
   241  kubectl describe rc helloworld-controller
   242  kubectl get rc
-  243  kubectl scale replicas=1 rc helloworld-controller
   244  kubectl scale --replicas=1 rc helloworld-controller
   245  kubectl get rc
   246  kubectl delete pod helloworld-controller-n9n8k
