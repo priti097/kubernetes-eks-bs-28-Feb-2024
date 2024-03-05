@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: python-webapp-svc
+  #namespace: pj-1-ns
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
@@ -16,5 +17,5 @@ spec:
           service:
             name: python-webapp-svc
             port:
-              number: 31007
+              number: 31007 # it is a node port bcz service resides inside the k8s
 
