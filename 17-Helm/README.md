@@ -11,12 +11,17 @@ sudo mv linux-amd64/helm /usr/local/bin/helm
 ```
 kubectl create -f helm-rbac.yaml
 ```
+kubectl get sa
+kubectl get ClusterRoleBindings 
+OR
+kubectl get ClusterRoleBindings tiller
+
 
 ## Install Nginx Web App.
 ```
 helm repo add azure-marketplace https://marketplace.azurecr.io/helm/v1/repo
 helm search repo nginx
-helm install first-nginx azure-marketplace/nginx-test
+helm install first-nginx azure-marketplace/nginx-test -n pj-1-ns
 helm list
 helm history first-nginx
 helm delete first-nginx
